@@ -6,13 +6,18 @@
     char recieverAccountNumber[12];
     char senderAccountNumber[12];
     char senderAccountNumber1[12]="1234567890";
+    int salary;
     printf("Please Enter the Sender Account numbers\n");
     scanf("%s",&senderAccountNumber);
     printf("Please Enter the recieverAccountNumber\n");
     scanf("%s",&recieverAccountNumber);
+    printf("Please Enter the Amount\n");
+    scanf("%d",&salary);
     int value=strcmp(senderAccountNumber,senderAccountNumber1);
     if(value==0){
-      printf("Third party Transaction is successfully completed!");
+      printf("Third party Transaction is successfully completed!\n");
+      printf("you transferd the %d ",salary);
+      printf("in to the  recieverAccountNumber successfully");
     }else{
       printf("THird part Transaction is not successfully completed!");
 
@@ -24,6 +29,7 @@
 }
 
 void dialogBroadBand(){
+    printf("Dialog Broadband Internet Service Providers");
 
      printf("Payement is successfully confirmed!");
 
