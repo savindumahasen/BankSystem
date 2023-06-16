@@ -2,17 +2,19 @@
 #include<string.h>
 
 
- void thirdPartyTransaction(){
-    char recieverAccountNumber[12];
-    char senderAccountNumber[12];
-    char senderAccountNumber1[12]="1234567890";
+ void thirdPartyTransaction(){   // function declaration
+    char recieverAccountNumber[12];  // define the variables
+    char senderAccountNumber[12];                          /*function definition*/
+    char senderAccountNumber1[12]="1234567890"; // function declaration
     int salary;
     printf("Please Enter the Sender Account numbers\n");
-    scanf("%s",&senderAccountNumber);
+    scanf("%s",&senderAccountNumber);                            // get the user input fro users
     printf("Please Enter the recieverAccountNumber\n");
-    scanf("%s",&recieverAccountNumber);
+    scanf("%s",&recieverAccountNumber);     // get the user input fro users
+    printf("Please Enter the recieverAccountNumber\n");
     printf("Please Enter the Amount\n");
-    scanf("%d",&salary);
+    scanf("%d",&salary);     // get the user input fro users
+    printf("Please Enter the recieverAccountNumber\n");
     int value=strcmp(senderAccountNumber,senderAccountNumber1);
     if(value==0){
       printf("Third party Transaction is successfully completed!\n");
@@ -27,12 +29,14 @@
   
 
 }
-void Payement(int value1,int value ){  //payement function  declaration
+void payement(int value1,int value,int salary ){  //payement function  declaration
 
   if(value1==0){
-                                                                               //payement function definition
-        if(value==0){
-              printf("Transaction is successfully confirmed!");
+                                                                               /*payement function definition
+                                                                                                           */
+       if(value==0){
+              printf("Transaction is successfully confirmed!\n");
+              printf("you transfered %d",salary);
 
         }else{
               printf("Transaction is not successfully confirmed!");
@@ -62,7 +66,7 @@ void telephonePayement(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(gsmNumber,rGsmNumber);
-    Payement(value1,value);
+    payement(value1,value,salary);
 }
 
 
@@ -86,7 +90,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(routerNo,rRouterNo);
-    Payement(value1,value);
+    payement(value1,value,salary);
    
 }
  void SLT(){
@@ -111,7 +115,7 @@ void dialogBroadBand(){
     int value1=strcmp(confirmPayement,confirmPayment1);
  
     int value=strcmp(invoiceNo,rInvoiceNo);
-    Payement(value1,value);
+    payement(value1,value,salary);
     
 
 
@@ -137,7 +141,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(routerNo,rRouterNo);
-    Payement(value1,value);
+    payement(value1,value,salary);
 
  }
  
@@ -161,11 +165,11 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayment1);
     int value=strcmp(invoiceNo,rInvoiceNo);
-    Payement(value1,value);
+    payement(value1,value,salary);
  }
 
   void refisterLK(){
-     printf("Lanka Host Internet Service Providers");
+    printf("Lanka Host Internet Service Providers");
     //-----------------------------------------------
     int salary;
     char invoiceNo[4];
@@ -184,7 +188,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayment1);
     int value=strcmp(invoiceNo,rInvoiceNo);
-    Payement(value1,value);   // call the payement function by passing two arguements
+    payement(value1,value,salary);   // call the payement function by passing two arguements
 
 
     
