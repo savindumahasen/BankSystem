@@ -318,8 +318,8 @@ void dialogBroadBand(){
          break;
          case 3:
             int option3;
-            printf("Please Enter the water Board service option");
-            scanf("%d",&option2);
+            printf("Please Enter the water Board service option\n");
+            scanf("%d",&option3);
             switch(option3){
                  
                  case 1:
