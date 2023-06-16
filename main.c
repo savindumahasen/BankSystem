@@ -27,7 +27,7 @@
   
 
 }
-void Payement(int value1,int value ){  //payement function  declaration
+void internetPayement(int value1,int value ){  //payement function  declaration
 
   if(value1==0){
                                                                                //payement function definition
@@ -67,7 +67,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(routerNo,rRouterNo);
-    Payement(value1,value);
+    internetPayement(value1,value);
    
 }
  void SLT(){
@@ -92,7 +92,7 @@ void dialogBroadBand(){
     int value1=strcmp(confirmPayement,confirmPayment1);
  
     int value=strcmp(invoiceNo,rInvoiceNo);
-    Payement(value1,value);
+    internetPayement(value1,value);
     
 
 
@@ -118,7 +118,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(routerNo,rRouterNo);
-    Payement(value1,value);
+    internetPayement(value1,value);
 
  }
  
@@ -142,7 +142,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayment1);
     int value=strcmp(invoiceNo,rInvoiceNo);
-    Payement(value,value1);
+    internetPayement(value,value1);
  }
 
   void refisterLK(){
@@ -165,7 +165,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayment1);
     int value=strcmp(invoiceNo,rInvoiceNo);
-    Payement(value1,value);   // call the payement function by passing two arguements
+    internetPayement(value1,value);   // call the payement function by passing two arguements
 
 
     
@@ -174,7 +174,14 @@ void dialogBroadBand(){
   }
 
   void dialogMobile(){
+  
 
+
+
+  }
+
+  void lankaBell(){
+       
   }
   void makePayements(){
   int option;
