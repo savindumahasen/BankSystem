@@ -161,7 +161,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayment1);
     int value=strcmp(invoiceNo,rInvoiceNo);
-    Payement(value,value1);
+    Payement(value1,value);
  }
 
   void refisterLK(){
