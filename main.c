@@ -19,7 +19,7 @@
       printf("you transferd the %d ",salary);
       printf("in to the  recieverAccountNumber successfully");
     }else{
-      printf("THird part Transaction is not successfully completed!");
+      printf("Third party Transaction is not successfully completed!");
 
       
     }
@@ -28,16 +28,124 @@
 
 }
 
+
+
 void dialogBroadBand(){
     printf("Dialog Broadband Internet Service Providers");
+    //-----------------------------------------------
+    int salary;
+    char routerNo[4];
+    char rRouterNo[4];
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Please Enter the Amount\n");
+    scanf("%d",&salary);
+    printf("Please Enter the Router No\n");
+    scanf("%s",&routerNo);
+    printf("Please Re-Enter the Router No\n");
+    scanf("%s",&rRouterNo);
+    int confirmPayement;
+    int confirmPayement1=1;
+    printf("Please Enter the 1 for doing the payement ");
+    int value1=strcmp(confirmPayement,confirmPayement1);
+     int value=strcmp(routerNo,rRouterNo);
+    if(value1==0){
+         if(value==0){
+            printf("Transaction is successfully confirmed!");
+
+         }else{
+            printf("Transaction is not successfully confirmed!");
+         }
+
+    }else{
+         printf("Transaction cannot be done!");
+    }
+
+   
+
+
 
      printf("Payement is successfully confirmed!");
 
 }
-void SLT(){
+ void SLT(){
+     printf("SLT-4G Internet Service Providers");
+    //-----------------------------------------------
+    int salary;
+    char invoiceNo[4];
+    char rInvoiceNo[4];
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Please Enter the Amount\n");
+    scanf("%d",&salary);
+    printf("Please Enter the Invoice with -\n");
+    scanf("%s",&invoiceNo);
+    printf("Please Re-Enter the Invoice with -\n");
+    scanf("%s",&rInvoiceNo);
+    char confirmPayement;
+    char confirmPayment1=1;
+    printf("If you want to do the payements please Enter the  1  ");
+    scanf("%s",&confirmPayement);
 
-     printf("Payement is successfully confirmed!");
+    int value1=strcmp(confirmPayement,confirmPayment1);
+    int value=strcmp(invoiceNo,rInvoiceNo);
+    if(value1==0){
+      
+        if(value==0){
+              printf("Transaction is successfully confirmed!");
+
+        }else{
+              printf("Transaction is not successfully confirmed!");
+        }
+
+           
+    }else{
+        printf("Transaction process cannot be done!");
+    }
+
+
+ 
 }
+ 
+ void lankaHost(){
+   printf("Lanka Host Internet Service Providers");
+    //-----------------------------------------------
+    int salary;
+    char invoiceNo[4];
+    char rInvoiceNo[4];
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Please Enter the Amount\n");
+    scanf("%d",&salary);
+    printf("Please Enter the Invoice with -\n");
+    scanf("%s",&invoiceNo);
+    printf("Please Re-Enter the Invoice with -\n");
+    scanf("%s",&rInvoiceNo);
+    char confirmPayement;
+    char confirmPayment1=1;
+    printf("If you want to do the payements please Enter the  1  ");
+    scanf("%s",&confirmPayement);
+
+    int value1=strcmp(confirmPayement,confirmPayment1);
+    int value=strcmp(invoiceNo,rInvoiceNo);
+    if(value1==0){
+      
+        if(value==0){
+              printf("Transaction is successfully confirmed!");
+
+        }else{
+              printf("Transaction is not successfully confirmed!");
+        }
+
+           
+    }else{
+        printf("Transaction process cannot be done!");
+    }
+
+    
+
+
+  }
 void makePayements(){
   int option;
   printf("Please Enter the correct option\n");
@@ -55,9 +163,56 @@ void makePayements(){
             case 2:
               SLT();
             break;
+            case 3:
+              mobitelBroadBand();
+              break;
+            case 4:
+              lankaHost();
+              break;
+            case 5:
+              registerLk();
+              break;
+            case 6:
+              nameBirth();
+              break;
+            default:
+              printf("you Enterd the incorrect option");
+              printf("Please Enter the correct option");
                 
         }
       break;
+      case 2:
+         int option2;
+         printf("Please Enter the Telephone service");
+         scanf("%d",&option2);
+         switch(option2){
+
+              case 1:
+                  dialogMobile();
+                  break;
+
+              case 2:
+                  lankaBell();
+                  break;
+              case 3:
+                  mobitel();
+                  break;
+              case 4:
+                 sriLankaTelecom();
+                 break;
+              case 5:
+                 airtel();
+                 break;
+              case 6:
+                  huch();
+                  break;
+              case 7:
+                  sunnetLanka();
+                  break;
+              default:
+                 printf("You Entered Invalid option \n");
+                 printf("Please Enter the correct option");
+         }
      
      default:
        printf("Your options are invalid please Enter the correct options");
