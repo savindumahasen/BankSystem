@@ -196,7 +196,7 @@ void makePayements(){
               lankaHost();
               break;
             case 5:
-       
+              refisterLK();
             default:
               printf("you Enterd the incorrect option");
               printf("Please Enter the correct option");
