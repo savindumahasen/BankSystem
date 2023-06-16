@@ -172,7 +172,11 @@ void dialogBroadBand(){
 
 
   }
-void makePayements(){
+
+  void dialogMobile(){
+
+  }
+  void makePayements(){
   int option;
   printf("Please Enter the correct option\n");
   scanf("%d",&option);
