@@ -44,7 +44,24 @@ void internetPayement(int value1,int value ){  //payement function  declaration
     }
   
 }
-
+void telephonePayement(){
+    int salary;
+    char gsmNumber[20];
+    char rGsmNumber[20];
+    printf("Pay From\n");
+    printf("1234567890");
+    printf("Enter the telephone GSM Number");
+    scanf("%s",&gsmNumber);
+    printf("Re Enter the telephone gsm number again");
+    scanf("%s",&rGsmNumber);
+    printf("Enter your telephone amount");
+    scanf("%d",&salary);
+    char confirmPayement[10];
+    char confirmPayement1[10]="yes";
+    int value1=strcmp(confirmPayement,confirmPayement1);
+    int value=strcmp(gsmNumber,rGsmNumber);
+    Payement(value1,value);
+}
 
 
 void dialogBroadBand(){
@@ -175,7 +192,7 @@ void dialogBroadBand(){
 
   void dialogMobile(){
   
-
+    telephonePayement();
 
 
   }
