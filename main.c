@@ -27,7 +27,7 @@
   
 
 }
-void internetPayement(int value1,int value ){  //payement function  declaration
+void Payement(int value1,int value ){  //payement function  declaration
 
   if(value1==0){
                                                                                //payement function definition
@@ -49,15 +49,17 @@ void telephonePayement(){
     char gsmNumber[20];
     char rGsmNumber[20];
     printf("Pay From\n");
-    printf("1234567890");
-    printf("Enter the telephone GSM Number");
+    printf("1234567890\n");
+    printf("Enter the telephone GSM Number\n");
     scanf("%s",&gsmNumber);
-    printf("Re Enter the telephone gsm number again");
+    printf("Re Enter the telephone gsm number again\n");
     scanf("%s",&rGsmNumber);
-    printf("Enter your telephone amount");
+    printf("Enter your telephone amount\n");
     scanf("%d",&salary);
     char confirmPayement[10];
     char confirmPayement1[10]="yes";
+    printf("If you want to do a payement Please Enter the yes\n");
+    scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(gsmNumber,rGsmNumber);
     Payement(value1,value);
@@ -84,7 +86,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(routerNo,rRouterNo);
-    internetPayement(value1,value);
+    Payement(value1,value);
    
 }
  void SLT(){
@@ -109,7 +111,7 @@ void dialogBroadBand(){
     int value1=strcmp(confirmPayement,confirmPayment1);
  
     int value=strcmp(invoiceNo,rInvoiceNo);
-    internetPayement(value1,value);
+    Payement(value1,value);
     
 
 
@@ -135,7 +137,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(routerNo,rRouterNo);
-    internetPayement(value1,value);
+    Payement(value1,value);
 
  }
  
@@ -159,7 +161,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayment1);
     int value=strcmp(invoiceNo,rInvoiceNo);
-    internetPayement(value,value1);
+    Payement(value,value1);
  }
 
   void refisterLK(){
@@ -182,7 +184,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayment1);
     int value=strcmp(invoiceNo,rInvoiceNo);
-    internetPayement(value1,value);   // call the payement function by passing two arguements
+    Payement(value1,value);   // call the payement function by passing two arguements
 
 
     
@@ -198,7 +200,25 @@ void dialogBroadBand(){
   }
 
   void lankaBell(){
+    telephonePayement();
        
+  }
+  void mobitel(){
+    telephonePayement();
+  }
+
+  void sriLankaTelecom(){
+       telephonePayement();
+  }
+
+  void  airtel(){
+       telephonePayement();
+  }
+  void huch(){
+       telephonePayement();
+  }
+  void sunnetLanka(){
+       telephonePayement();
   }
   void makePayements(){
   int option;
@@ -263,10 +283,11 @@ void dialogBroadBand(){
                  printf("You Entered Invalid option \n");
                  printf("Please Enter the correct option");
          }
+         break;
          
      
-     default:
-       printf("Your options are invalid please Enter the correct options");
+       default:
+        printf("Your options are invalid please Enter the correct options");
 
                  
          
@@ -284,7 +305,7 @@ int main()
 
     printf("Please Enter the User Name\n");
     scanf("%s",&userName);
-    printf("Please Enter the password ");
+    printf("Please Enter the password\n");
     scanf("%d",&password);
     int value=strcmp(userName,userName1);
   
