@@ -27,6 +27,23 @@
   
 
 }
+void   Payement(int value1,int value ){  //payement function  declaration
+
+  if(value1==0){
+                                                                               //payement function definition
+        if(value==0){
+              printf("Transaction is successfully confirmed!");
+
+        }else{
+              printf("Transaction is not successfully confirmed!");
+        }
+
+           
+  }else{
+        printf("Transaction process cannot be done!");
+    }
+  
+}
 
 
 
@@ -88,20 +105,10 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
 
     int value1=strcmp(confirmPayement,confirmPayment1);
+ 
     int value=strcmp(invoiceNo,rInvoiceNo);
-    if(value1==0){
-      
-        if(value==0){
-              printf("Transaction is successfully confirmed!");
-
-        }else{
-              printf("Transaction is not successfully confirmed!");
-        }
-
-           
-    }else{
-        printf("Transaction process cannot be done!");
-    }
+    Payement(value1,value);
+    
 
 
  
@@ -125,7 +132,6 @@ void dialogBroadBand(){
     char confirmPayment1=1;
     printf("If you want to do the payements please Enter the  1  ");
     scanf("%s",&confirmPayement);
-
     int value1=strcmp(confirmPayement,confirmPayment1);
     int value=strcmp(invoiceNo,rInvoiceNo);
     if(value1==0){
@@ -141,6 +147,30 @@ void dialogBroadBand(){
     }else{
         printf("Transaction process cannot be done!");
     }
+ }
+
+  void refisterLK(){
+     printf("Lanka Host Internet Service Providers");
+    //-----------------------------------------------
+    int salary;
+    char invoiceNo[4];
+    char rInvoiceNo[4];
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Please Enter the Amount\n");
+    scanf("%d",&salary);
+    printf("Please Enter the Invoice with -\n");
+    scanf("%s",&invoiceNo);
+    printf("Please Re-Enter the Invoice with -\n");
+    scanf("%s",&rInvoiceNo);
+    char confirmPayement;
+    char confirmPayment1=1;
+    printf("If you want to do the payements please Enter the  1  ");
+    scanf("%s",&confirmPayement);
+    int value1=strcmp(confirmPayement,confirmPayment1);
+    int value=strcmp(invoiceNo,rInvoiceNo);
+    Payement(value1,value);   // call the payement function by passing two arguements
+
 
     
 
@@ -225,10 +255,10 @@ void makePayements(){
 }
 int main()
 {
-    char userName[50];
+    char userName[50];   // define the variables
     int password;
     int option;
-    char userName1[50]="Savindu";
+    char userName1[50]="Savindu";   // declare the variables
 
     printf("Please Enter the User Name\n");
     scanf("%s",&userName);
@@ -237,7 +267,7 @@ int main()
     int value=strcmp(userName,userName1);
   
 
-    if((value==0)&&(password==456)){
+    if((value==0)&&(password==456)){      
         printf("Login is successfully confirmed\n");
         printf("You can see the options below\n");
         printf("Please Enter the correct option\n");
