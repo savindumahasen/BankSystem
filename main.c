@@ -224,6 +224,34 @@ void dialogBroadBand(){
   void sunnetLanka(){
        telephonePayement();
   }
+  void nationalWaterAndDrainge(){
+    //------------------------------------
+    int salary;
+    char billNumber[12];
+    char reBillNumber[12];
+    printf("National Water Supply And Drainage Board\n");
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Enter the Amount\n");
+    scanf("%d",&salary);
+    printf("Enter the Bill Account Number\n");
+    scanf("%s",&billNumber);
+    printf("Re-Enter the Bill Account Number\n");
+    scanf("%s",&reBillNumber);
+    char value=strcmp(billNumber,reBillNumber);
+    char confirmPayement[12];
+    char confirmPayement1[12]="yes";
+    printf("Do you want to do a pay Enter the  yes ");
+    scanf("%s",&confirmPayement);
+    int value1=strcmp(confirmPayement,confirmPayement1);
+    payement(value1,value,salary);
+
+    
+
+
+  }
+
+ 
   void makePayements(){
   int option;
   printf("Please Enter the correct option\n");
@@ -288,6 +316,19 @@ void dialogBroadBand(){
                  printf("Please Enter the correct option");
          }
          break;
+         case 3:
+            int option2;
+            printf("Please Enter the water Board service option");
+            scanf("%d",&option2);
+            switch(option2){
+                 
+                 case 1:
+                    nationalWaterAndDrainge();
+                    break;
+                default:
+                    printf("You Enterd incorrect option");
+            }
+          break;
          
      
        default:
