@@ -27,7 +27,7 @@
   
 
 }
-void   Payement(int value1,int value ){  //payement function  declaration
+void Payement(int value1,int value ){  //payement function  declaration
 
   if(value1==0){
                                                                                //payement function definition
@@ -48,7 +48,7 @@ void   Payement(int value1,int value ){  //payement function  declaration
 
 
 void dialogBroadBand(){
-    printf("Dialog Broadband Internet Service Providers");
+    printf("Dialog Broadband Internet Service Providers\n");
     //-----------------------------------------------
     int salary;
     char routerNo[4];
@@ -61,36 +61,21 @@ void dialogBroadBand(){
     scanf("%s",&routerNo);
     printf("Please Re-Enter the Router No\n");
     scanf("%s",&rRouterNo);
-    int confirmPayement;
-    int confirmPayement1=1;
-    printf("Please Enter the 1 for doing the payement ");
+    char confirmPayement[10];
+    char confirmPayement1[10]="yes";
+    printf("Please Enter the yes for doing the payement\n");
+    scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
-     int value=strcmp(routerNo,rRouterNo);
-    if(value1==0){
-         if(value==0){
-            printf("Transaction is successfully confirmed!");
-
-         }else{
-            printf("Transaction is not successfully confirmed!");
-         }
-
-    }else{
-         printf("Transaction cannot be done!");
-    }
-
+    int value=strcmp(routerNo,rRouterNo);
+    Payement(value1,value);
    
-
-
-
-     printf("Payement is successfully confirmed!");
-
 }
  void SLT(){
      printf("SLT-4G Internet Service Providers");
     //-----------------------------------------------
     int salary;
-    char invoiceNo[4];
-    char rInvoiceNo[4];
+    char invoiceNo[20];
+    char rInvoiceNo[20];
     printf("Pay From\n");
     printf("1234567890\n");
     printf("Please Enter the Amount\n");
@@ -99,9 +84,9 @@ void dialogBroadBand(){
     scanf("%s",&invoiceNo);
     printf("Please Re-Enter the Invoice with -\n");
     scanf("%s",&rInvoiceNo);
-    char confirmPayement;
-    char confirmPayment1=1;
-    printf("If you want to do the payements please Enter the  1  ");
+    char confirmPayement[10];
+    char confirmPayment1[10]="yes";
+    printf("If you want to do the payements ");
     scanf("%s",&confirmPayement);
 
     int value1=strcmp(confirmPayement,confirmPayment1);
@@ -113,6 +98,29 @@ void dialogBroadBand(){
 
  
 }
+ void mobitelBroadBrand(){            
+  printf("Mobitel Internet Service Providers\n");
+    //-----------------------------------------------
+    int salary;
+    char routerNo[4];
+    char rRouterNo[4];
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Please Enter the Amount\n");
+    scanf("%d",&salary);
+    printf("Please Enter the Router No\n");
+    scanf("%s",&routerNo);
+    printf("Please Re-Enter the Router No\n");
+    scanf("%s",&rRouterNo);
+    char confirmPayement[10];
+    char confirmPayement1[10]="yes";
+    printf("Please Enter the yes for doing the payement\n");
+    scanf("%s",&confirmPayement);
+    int value1=strcmp(confirmPayement,confirmPayement1);
+    int value=strcmp(routerNo,rRouterNo);
+    Payement(value1,value);
+
+ }
  
  void lankaHost(){
    printf("Lanka Host Internet Service Providers");
@@ -128,25 +136,13 @@ void dialogBroadBand(){
     scanf("%s",&invoiceNo);
     printf("Please Re-Enter the Invoice with -\n");
     scanf("%s",&rInvoiceNo);
-    char confirmPayement;
-    char confirmPayment1=1;
-    printf("If you want to do the payements please Enter the  1  ");
+    char confirmPayement[10];
+    char confirmPayment1[10]="yes";
+    printf("If you want to do the payements please Enter the yes\n");
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayment1);
     int value=strcmp(invoiceNo,rInvoiceNo);
-    if(value1==0){
-      
-        if(value==0){
-              printf("Transaction is successfully confirmed!");
-
-        }else{
-              printf("Transaction is not successfully confirmed!");
-        }
-
-           
-    }else{
-        printf("Transaction process cannot be done!");
-    }
+    Payement(value,value1);
  }
 
   void refisterLK(){
@@ -163,8 +159,8 @@ void dialogBroadBand(){
     scanf("%s",&invoiceNo);
     printf("Please Re-Enter the Invoice with -\n");
     scanf("%s",&rInvoiceNo);
-    char confirmPayement;
-    char confirmPayment1=1;
+    char confirmPayement[10];
+    char confirmPayment1[10]="yes";
     printf("If you want to do the payements please Enter the  1  ");
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayment1);
@@ -194,24 +190,20 @@ void makePayements(){
               SLT();
             break;
             case 3:
-              mobitelBroadBand();
+              mobitelBroadBrand();
               break;
             case 4:
               lankaHost();
               break;
             case 5:
-              registerLk();
-              break;
-            case 6:
-              nameBirth();
-              break;
+       
             default:
               printf("you Enterd the incorrect option");
               printf("Please Enter the correct option");
                 
         }
       break;
-      case 2:
+     case 2:
          int option2;
          printf("Please Enter the Telephone service");
          scanf("%d",&option2);
@@ -243,6 +235,7 @@ void makePayements(){
                  printf("You Entered Invalid option \n");
                  printf("Please Enter the correct option");
          }
+         
      
      default:
        printf("Your options are invalid please Enter the correct options");
@@ -251,8 +244,9 @@ void makePayements(){
          
   }
       
-  
-}
+ 
+  }
+
 int main()
 {
     char userName[50];   // define the variables
