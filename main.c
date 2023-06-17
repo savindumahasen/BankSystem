@@ -403,16 +403,17 @@ void dialogBroadBand(){
   }
  
   void makePayements(){
-  printf("If you want to do a payements for Internet Service providers Please Enter the option 1\n");
-  printf("If you want to  do a payements for Telephone Services Please Enter the option 2\n");
-  printf("If you want to do a payement for water Board Please Enter the option 3\n");
-  printf("If you want to do  a payements for Electricity Please Enter the option 4\n");
-  printf("If youw want to do a payement for Cable TV  Please Enter the option 5\n");
-  int option;
-  printf("Please Enter the correct option\n");
-  scanf("%d",&option);
+   printf("If you want to do a payements for Internet Service providers Please Enter the option 1\n");
+   printf("If you want to  do a payements for Telephone Services Please Enter the option 2\n");
+   printf("If you want to do a payement for water Board Please Enter the option 3\n");
+   printf("If you want to do  a payements for Electricity Please Enter the option 4\n");
+   printf("If youw want to do a payement for Cable TV  Please Enter the option 5\n");
+   printf("Ïf you want to do a payement for Insurance Please Enter the option 6\n");
+   int option;
+   printf("Please Enter the correct option\n");
+   scanf("%d",&option);
 
-  switch(option){
+   switch(option){
      case 1:
         printf("If you want to  do  a payements for Dialog Broadbrand Please Enter the option 1\n");
         printf("If you want to  do a payements for SLT-4G Please Enter the option 2\n");
@@ -523,7 +524,39 @@ void dialogBroadBand(){
                 break;;
           }
           break;
+     case 6:
+          printf("If you want to do a payement for Softlogic Life Insurance Please Enter the option 1\n");
+          printf("If you want to  do a payement for Fairfirst Insurance Please Enter the option 2\n");
+          printf("If you want to do a payement for Srilanka Insurance-Life Renewals Please Enter the option 3\n");
+          printf("If you want to do a payement for Srilana Insurance-Motor Renewals Please Enter the option 4\n");
+          printf("If you want to do a payement for Janashathi Insurance Please Enter the option 4\n");
+          printf("If you want to do a payement for Ceylinco Life Insurance Please Enter the option 5\n");
+          int option6;
+          printf("Please Enter the Insurance option\n");
+          scanf("%d",&option6);
+          switch(option6){
 
+            case 1:
+                softloginInsurance();
+                break;
+            case 2:
+                fairFirstInsurance();
+                break;
+            case 3:
+                sriLanaInsuranceLife();
+                break;
+            case 4:
+                sriLankaMotorInsurance();
+                break;
+            case 5:
+                ceylincoLife();
+                break;
+
+            default:
+               printf("You Entered incorrect option\n");
+               printf("Please Enter the correct option");
+          
+          }
          
      
        default:
