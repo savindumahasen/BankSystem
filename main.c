@@ -19,8 +19,8 @@
     if(value==0){
       printf("Third party Transaction is successfully completed!\n");
       printf("you transferd the %d ",salary);
-      printf(" into the %s", recieverAccountNumber[12]);
-      printf("successfully");
+      printf(" into the %s", recieverAccountNumber);
+      printf(" successfully");
     }else{
       printf("Third party Transaction is not successfully completed!");
 
