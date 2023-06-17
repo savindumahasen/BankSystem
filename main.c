@@ -19,7 +19,8 @@
     if(value==0){
       printf("Third party Transaction is successfully completed!\n");
       printf("you transferd the %d ",salary);
-      printf(" into the  recieverAccountNumber successfully");
+      printf(" into the %s", recieverAccountNumber[12]);
+      printf("successfully");
     }else{
       printf("Third party Transaction is not successfully completed!");
 
@@ -368,11 +369,12 @@ int main()
     if((value==0)&&(password==456)){      
         printf("Login is successfully confirmed\n");
         printf("You can see the options below\n");
-        printf("Please Enter the correct option\n");
-        scanf("%d",&option);
         //-----------------------------------------
         printf("If you want to do Third party Transaction Please Enter the option 1\n");
         printf("If you want to do Make Payements please Enter the option 2 ");
+        printf("Please Enter the correct option\n");
+        scanf("%d",&option);
+      
         //------------------------------------------------------
         switch (option)
         {
