@@ -253,11 +253,20 @@ void dialogBroadBand(){
 
  
   void makePayements(){
+  printf("If you want to do a payements for Internet Service providers Please Enter the option 1\n");
+  printf("If you want to  do a payements for Telephone Services Please Enter the option 2\n");
+  printf("If you want to do a payement for water Board Please Enter the option 3\n");
   int option;
   printf("Please Enter the correct option\n");
   scanf("%d",&option);
+
   switch(option){
      case 1:
+        printf("If you want to  do  a payements for Dialog Broadbrand Please Enter the option 1\n");
+        printf("If you want to  do a payements for SLT-4G Please Enter the option 2\n");
+        printf("If you want to do a payement for Mobitel Broadbrand Please Enter the option 3\n");
+        printf("If you want to  do a payement for Lanka Host Please Enter the option 4\n");
+        printf("If you want to do a payement for Refister LK Please Enter the the option 5\n");
         int option1;
         printf("Please Enter the Inernet service provider\n");
         scanf("%d",&option1);
@@ -278,7 +287,7 @@ void dialogBroadBand(){
             case 5:
               refisterLK();
             default:
-              printf("you Enterd the incorrect option");
+              printf("You Enterd the incorrect option");
               printf("Please Enter the correct option");
                 
         }
@@ -300,11 +309,11 @@ void dialogBroadBand(){
                   mobitel();
                   break;
               case 4:
-                 sriLankaTelecom();
-                 break;
+                  sriLankaTelecom();
+                  break;
               case 5:
-                 airtel();
-                 break;
+                  airtel();
+                  break;
               case 6:
                   huch();
                   break;
@@ -312,11 +321,12 @@ void dialogBroadBand(){
                   sunnetLanka();
                   break;
               default:
-                 printf("You Entered Invalid option \n");
-                 printf("Please Enter the correct option");
+                  printf("You Entered Invalid option \n");
+                  printf("Please Enter the correct option\n");
          }
          break;
          case 3:
+            printf("If you want to do a payement for National Water And Drainge Please Enter the 1\n");
             int option3;
             printf("Please Enter the water Board service option\n");
             scanf("%d",&option3);
@@ -326,7 +336,7 @@ void dialogBroadBand(){
                     nationalWaterAndDrainge();
                     break;
                 default:
-                    printf("You Enterd incorrect option");
+                    printf("You Entered Incorrect option");
             }
           break;
          
@@ -360,6 +370,10 @@ int main()
         printf("You can see the options below\n");
         printf("Please Enter the correct option\n");
         scanf("%d",&option);
+        //-----------------------------------------
+        printf("If you want to do Third party Transaction Please Enter the option 1\n");
+        printf("If you want to do Make Payements please Enter the option 2 ");
+        //------------------------------------------------------
         switch (option)
         {
         case 1:
