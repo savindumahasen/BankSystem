@@ -30,7 +30,7 @@
   
 
 }
-void payement(int value1,int value,int salary,char billingYear[20],char billingMonth[20]){  //payement function  declaration
+void payement(int value1,int value,int salary,char billingYear[20],char billingMonth[20],char service[100]){  //payement function  declaration
 
   if(value1==0){
                                                                                /*payement function definition
@@ -49,31 +49,14 @@ void payement(int value1,int value,int salary,char billingYear[20],char billingM
     }
   
 }
-void telephonePayement(){
-    int salary;
-    char gsmNumber[20];
-    char rGsmNumber[20];
-    char billingYear[20];
-    char billingMonth[20];
-    printf("Pay From\n");
-    printf("1234567890\n");
-    printf("Enter the telephone GSM Number\n");
-    scanf("%s",&gsmNumber);
-    printf("Re Enter the telephone GSM number again\n");
-    scanf("%s",&rGsmNumber);
-    printf("Enter your telephone amount\n");
-    scanf("%d",&salary);
-    printf("Please Enter the Billing Year\n");
-    scanf("%s",&billingYear);
-    printf("Please Enter the Billing Month\n");
-    scanf("%s",&billingMonth);
-    char confirmPayement[10];
-    char confirmPayement1[10]="yes";
-    printf("If you want to do the payement Please Enter the yes\n");
-    scanf("%s",&confirmPayement);
-    int value1=strcmp(confirmPayement,confirmPayement1);
-    int value=strcmp(gsmNumber,rGsmNumber);
-    payement(value1,value,salary,billingYear,billingMonth);
+void telephonePayement(int value1,int value,int salary,char billingYear[20],char billingMonth[20],char Service[100]){
+  if(value1==0){
+     if(value==0){
+          printf("you transferd %d",salary);
+          printf(" into the %s",Service);
+     }
+  }
+
 }
 
 
@@ -81,6 +64,7 @@ void dialogBroadBand(){
     printf("Dialog Broadband Internet Service Providers\n");
     //-----------------------------------------------
     int salary;
+    char service[100]="Dialog Broad Brand";
     char routerNo[12];
     char rRouterNo[12];
     char billingYear[20];
@@ -104,13 +88,14 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(routerNo,rRouterNo);
-    payement(value1,value,salary,billingYear,billingMonth);
+    payement(value1,value,salary,billingYear,billingMonth,service);
    
 }
  void SLT(){
      printf("SLT-4G Internet Service Providers");
     //-----------------------------------------------
     int salary;
+    char service[100]="SLT-4G";
     char invoiceNo[20];
     char rInvoiceNo[20];
     char billingYear[20];
@@ -135,7 +120,7 @@ void dialogBroadBand(){
     int value1=strcmp(confirmPayement,confirmPayment1);
  
     int value=strcmp(invoiceNo,rInvoiceNo);
-    payement(value1,value,salary,billingYear,billingMonth);
+    payement(value1,value,salary,billingYear,billingMonth,service);
     
 
 
@@ -145,6 +130,7 @@ void dialogBroadBand(){
   printf("Mobitel Internet Service Providers\n");
     //-----------------------------------------------
     int salary;
+    char service[100]="Mobitel Broad Brand";
     char routerNo[12];
     char rRouterNo[12];
     char confirmPayement[10];
@@ -167,7 +153,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(routerNo,rRouterNo);
-    payement(value1,value,salary,billingYear,billingMonth);
+    payement(value1,value,salary,billingYear,billingMonth,service);
 
  }
  
@@ -175,6 +161,7 @@ void dialogBroadBand(){
    printf("Lanka Host Internet Service Providers");
     //-----------------------------------------------
     int salary;
+    char service[100]="Lanka Host";
     char invoiceNo[4];
     char rInvoiceNo[4];
     char billingYear[20];
@@ -198,13 +185,14 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayment1);
     int value=strcmp(invoiceNo,rInvoiceNo);
-    payement(value1,value,salary,billingYear,billingMonth);
+    payement(value1,value,salary,billingYear,billingMonth,service);
  }
 
   void refisterLK(){
     printf("Lanka Host Internet Service Providers");
     //-----------------------------------------------
     int salary;
+    char service[100]="Refister LK";
     char invoiceNo[4];
     char rInvoiceNo[4];
     char billingYear[20];
@@ -228,7 +216,7 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(invoiceNo,rInvoiceNo);
-    payement(value1,value,salary,billingYear,billingMonth);   // call the payement function by passing two arguements
+    payement(value1,value,salary,billingYear,billingMonth,service);   // call the payement function by passing two arguements
 
 
     
@@ -238,35 +226,211 @@ void dialogBroadBand(){
 
   void dialogMobile(){
   
-    telephonePayement();
+   // telephonePayement();
+       int salary;
+    char service[100]="telephone";
+    char gsmNumber[20];
+    char rGsmNumber[20];
+    char billingYear[20];
+    char billingMonth[20];
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Enter the telephone GSM Number\n");
+    scanf("%s",&gsmNumber);
+    printf("Re Enter the telephone GSM number again\n");
+    scanf("%s",&rGsmNumber);
+    printf("Enter your telephone amount\n");
+    scanf("%d",&salary);
+    printf("Please Enter the Billing Year\n");
+    scanf("%s",&billingYear);
+    printf("Please Enter the Billing Month\n");
+    scanf("%s",&billingMonth);
+    char confirmPayement[10];
+    char confirmPayement1[10]="yes";
+    printf("If you want to do the payement Please Enter the yes\n");
+    scanf("%s",&confirmPayement);
+    int value1=strcmp(confirmPayement,confirmPayement1);
+    int value=strcmp(gsmNumber,rGsmNumber);
+    payement(value1,value,salary,billingYear,billingMonth,service);
 
 
   }
 
   void lankaBell(){
-    telephonePayement();
+    //telephonePayement();
+        int salary;
+    char service[100]="telephone";
+    char gsmNumber[20];
+    char rGsmNumber[20];
+    char billingYear[20];
+    char billingMonth[20];
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Enter the telephone GSM Number\n");
+    scanf("%s",&gsmNumber);
+    printf("Re Enter the telephone GSM number again\n");
+    scanf("%s",&rGsmNumber);
+    printf("Enter your telephone amount\n");
+    scanf("%d",&salary);
+    printf("Please Enter the Billing Year\n");
+    scanf("%s",&billingYear);
+    printf("Please Enter the Billing Month\n");
+    scanf("%s",&billingMonth);
+    char confirmPayement[10];
+    char confirmPayement1[10]="yes";
+    printf("If you want to do the payement Please Enter the yes\n");
+    scanf("%s",&confirmPayement);
+    int value1=strcmp(confirmPayement,confirmPayement1);
+    int value=strcmp(gsmNumber,rGsmNumber);
+    payement(value1,value,salary,billingYear,billingMonth,service);
        
   }
   void mobitel(){
-    telephonePayement();
+    //telephonePayement();
+        int salary;
+    char service[100]="telephone";
+    char gsmNumber[20];
+    char rGsmNumber[20];
+    char billingYear[20];
+    char billingMonth[20];
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Enter the telephone GSM Number\n");
+    scanf("%s",&gsmNumber);
+    printf("Re Enter the telephone GSM number again\n");
+    scanf("%s",&rGsmNumber);
+    printf("Enter your telephone amount\n");
+    scanf("%d",&salary);
+    printf("Please Enter the Billing Year\n");
+    scanf("%s",&billingYear);
+    printf("Please Enter the Billing Month\n");
+    scanf("%s",&billingMonth);
+    char confirmPayement[10];
+    char confirmPayement1[10]="yes";
+    printf("If you want to do the payement Please Enter the yes\n");
+    scanf("%s",&confirmPayement);
+    int value1=strcmp(confirmPayement,confirmPayement1);
+    int value=strcmp(gsmNumber,rGsmNumber);
+    payement(value1,value,salary,billingYear,billingMonth,service);
   }
 
   void sriLankaTelecom(){
-       telephonePayement();
+       //telephonePayement();
+           int salary;
+    char service[100]="telephone";
+    char gsmNumber[20];
+    char rGsmNumber[20];
+    char billingYear[20];
+    char billingMonth[20];
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Enter the telephone GSM Number\n");
+    scanf("%s",&gsmNumber);
+    printf("Re Enter the telephone GSM number again\n");
+    scanf("%s",&rGsmNumber);
+    printf("Enter your telephone amount\n");
+    scanf("%d",&salary);
+    printf("Please Enter the Billing Year\n");
+    scanf("%s",&billingYear);
+    printf("Please Enter the Billing Month\n");
+    scanf("%s",&billingMonth);
+    char confirmPayement[10];
+    char confirmPayement1[10]="yes";
+    printf("If you want to do the payement Please Enter the yes\n");
+    scanf("%s",&confirmPayement);
+    int value1=strcmp(confirmPayement,confirmPayement1);
+    int value=strcmp(gsmNumber,rGsmNumber);
+    payement(value1,value,salary,billingYear,billingMonth,service);
   }
 
   void  airtel(){
-       telephonePayement();
+       //telephonePayement();
+           int salary;
+    char service[100]="telephone";
+    char gsmNumber[20];
+    char rGsmNumber[20];
+    char billingYear[20];
+    char billingMonth[20];
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Enter the telephone GSM Number\n");
+    scanf("%s",&gsmNumber);
+    printf("Re Enter the telephone GSM number again\n");
+    scanf("%s",&rGsmNumber);
+    printf("Enter your telephone amount\n");
+    scanf("%d",&salary);
+    printf("Please Enter the Billing Year\n");
+    scanf("%s",&billingYear);
+    printf("Please Enter the Billing Month\n");
+    scanf("%s",&billingMonth);
+    char confirmPayement[10];
+    char confirmPayement1[10]="yes";
+    printf("If you want to do the payement Please Enter the yes\n");
+    scanf("%s",&confirmPayement);
+    int value1=strcmp(confirmPayement,confirmPayement1);
+    int value=strcmp(gsmNumber,rGsmNumber);
+    payement(value1,value,salary,billingYear,billingMonth,service);
   }
   void huch(){
-       telephonePayement();
+      // telephonePayement();
+          int salary;
+    char service[100]="telephone";
+    char gsmNumber[20];
+    char rGsmNumber[20];
+    char billingYear[20];
+    char billingMonth[20];
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Enter the telephone GSM Number\n");
+    scanf("%s",&gsmNumber);
+    printf("Re Enter the telephone GSM number again\n");
+    scanf("%s",&rGsmNumber);
+    printf("Enter your telephone amount\n");
+    scanf("%d",&salary);
+    printf("Please Enter the Billing Year\n");
+    scanf("%s",&billingYear);
+    printf("Please Enter the Billing Month\n");
+    scanf("%s",&billingMonth);
+    char confirmPayement[10];
+    char confirmPayement1[10]="yes";
+    printf("If you want to do the payement Please Enter the yes\n");
+    scanf("%s",&confirmPayement);
+    int value1=strcmp(confirmPayement,confirmPayement1);
+    int value=strcmp(gsmNumber,rGsmNumber);
+    payement(value1,value,salary,billingYear,billingMonth,service);
   }
   void sunnetLanka(){
-       telephonePayement();
+      // telephonePayement();
+    int salary;
+    char service[100]="telephone";
+    char gsmNumber[20];
+    char rGsmNumber[20];
+    char billingYear[20];
+    char billingMonth[20];
+    printf("Pay From\n");
+    printf("1234567890\n");
+    printf("Enter the telephone GSM Number\n");
+    scanf("%s",&gsmNumber);
+    printf("Re Enter the telephone GSM number again\n");
+    scanf("%s",&rGsmNumber);
+    printf("Enter your telephone amount\n");
+    scanf("%d",&salary);
+    printf("Please Enter the Billing Year\n");
+    scanf("%s",&billingYear);
+    printf("Please Enter the Billing Month\n");
+    scanf("%s",&billingMonth);
+    char confirmPayement[10];
+    char confirmPayement1[10]="yes";
+    printf("If you want to do the payement Please Enter the yes\n");
+    scanf("%s",&confirmPayement);
+    int value1=strcmp(confirmPayement,confirmPayement1);
+    int value=strcmp(gsmNumber,rGsmNumber);
+    payement(value1,value,salary,billingYear,billingMonth,service);
   }
   void nationalWaterAndDrainge(){
     //------------------------------------
     int salary;
+    char service[100]="National Water And Drainge";
     char billNumber[12];
     char reBillNumber[12];
     char billingYear[20];
@@ -286,7 +450,7 @@ void dialogBroadBand(){
     printf("If you want to do the payement Please Enter the yes ");
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
-    payement(value1,value,salary,billingYear,billingMonth);
+    payement(value1,value,salary,billingYear,billingMonth,service);
 
     
 
@@ -295,6 +459,7 @@ void dialogBroadBand(){
   void ceylonElectricityBoard(){
     //----------Ceylon Electricity Board----------
     int salary;
+    int service[100]="Ceylon Electricity Board";
     char eBillAccountNumber[20];
     char reBillAccountNumber[20];
     char confirmPayement[10];
@@ -317,13 +482,14 @@ void dialogBroadBand(){
     scanf("%d",&billingMonth);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(eBillAccountNumber,reBillAccountNumber);
-    payement(value1,value,salary,billingYear,billingMonth);
+    payement(value1,value,salary,billingYear,billingMonth,service);
 
 
 
   }
   void lankaElectricityCompany(){
       int salary;
+      char service[100]="Lanka Electricity Company";
       char accountNumber[12];
       char accountNumber1[12]="1234567890";
       char confirmPayement[10];
@@ -347,11 +513,12 @@ void dialogBroadBand(){
       scanf("%s",&confirmPayement);
       int value1=strcmp(accountNumber,accountNumber1);
       int value=strcmp(accountNumber,accountNumber1);
-      payement(value1,value,salary,billingYear,billingMonth);
+      payement(value1,value,salary,billingYear,billingMonth,service);
   }
   void dialogTV(){
      //--------------------------------------------------------
      int salary;
+     char service[100]="Dialog TV";
      char billingYear[20];
      char billingMonth[20];
      char accountNumber[12];
@@ -372,7 +539,7 @@ void dialogBroadBand(){
      printf("If you want to  do payement Please Enter the yes\n ");
      int value1=strcmp(confirmPayement,confirmPayement1);
      int value=strcmp(accountNumber,reAccountNumber);
-     payement(value1,value,salary,billingYear,billingMonth);
+     payement(value1,value,salary,billingYear,billingMonth,service);
 
   }
  
