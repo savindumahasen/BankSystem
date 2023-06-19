@@ -50,6 +50,24 @@ void payement(int value1,int value,int salary,char billingYear[20],char billingM
     }
   
 }
+void insurancePayement(int value1,int value,int salary,char service[100]){
+
+  if(value1==0){
+     if(value==0){
+
+            printf("you transfered %d",salary);
+            printf(" into the %s",service);
+     }else{
+          printf("Transaction is not successfully onfirmed!");
+     }
+
+  
+  }else{
+         printf("Transaction process cannot be done!");
+  }
+       
+  }
+
 void telephonePayement(char service[100]){
     int salary;
     char gsmNumber[20];
@@ -400,6 +418,31 @@ void dialogBroadBand(){
      int value=strcmp(accountNumber,reAccountNumber);
      payement(value1,value,salary,billingYear,billingMonth,service);
 
+  }
+ 
+
+  void softlogicInsurance(){
+      int salary;
+      char policyNumber[12];
+      char rePolicyNumber[12];
+      char confirmPayement;
+      char confirmPayement1[12];
+      char service[100];
+      printf("Pay From\n");
+      printf("1234567890");
+      printf("Please Enter the Amount\n");
+      scanf("%d",&salary);
+      printf("Please Enter the Policy Number\n");
+      scanf("%s",&policyNumber);
+      printf("Please Re-Enter the policy Number");
+      scanf("%s",&rePolicyNumber);
+      printf("Please Enter the yes for dping the payement\n");
+      scanf("%s",&confirmPayement);
+      printf("Please Enter the Insurance Service name\n");
+      scanf("%s",&service);
+      int value1=strcmp(confirmPayement,confirmPayement1);
+      int value=strcmp(policyNumber,rePolicyNumber);
+      insurancePayement(value1,value,salary,service);
   }
  
   void makePayements(){
