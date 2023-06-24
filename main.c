@@ -32,7 +32,7 @@
   
 
 }
-void payement(int value1,int value,int salary,char billingYear[20],char billingMonth[20],char service[100]){  //payement function  declaration
+void payement(int value1,int value,int salary,char billingYear[20],char billingMonth[20],char service[100],int recietNumber){  //payement function  declaration
 
   if(value1==0){
                                                                                /*payement function definition
@@ -49,6 +49,7 @@ void payement(int value1,int value,int salary,char billingYear[20],char billingM
               if(value3==0){
                   
                   char accountNumber[12]="1234567890";
+                
                   printf("      Payement Successful    \n");
                   printf("           RS. 600.00                 \n");
                   printf("   Transaction successfulkly processed and amount\n");
@@ -66,7 +67,7 @@ void payement(int value1,int value,int salary,char billingYear[20],char billingM
                   printf("salary %d \n",salary);
                   printf("Billing year %s \n",billingYear);
                   printf("Billing Month %s \n",billingMonth);
-                  //printf("Reciet Number %d",recietNumber,"\n");
+                  printf("Reciet Number %d \n",recietNumber);
                   printf("Result     Captured");
 
               }
@@ -108,7 +109,9 @@ void telephonePayement(char service[100]){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(gsmNumber,rGsmNumber);
-    payement(value1,value,salary,billingYear,billingMonth,service);
+    srand(0);
+    int recietNumber=(rand())*100;
+    payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);
 }
 
 
@@ -141,7 +144,9 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(routerNo,rRouterNo);
-    payement(value1,value,salary,billingYear,billingMonth,service);
+    srand(1);
+    int recietNumber=(rand())*100;
+    payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);
    
 }
  void SLT(){
@@ -174,7 +179,9 @@ void dialogBroadBand(){
     int value1=strcmp(confirmPayement,confirmPayment1);
  
     int value=strcmp(invoiceNo,rInvoiceNo);
-    payement(value1,value,salary,billingYear,billingMonth,service);
+    srand(2);
+    int recietNumber=(rand())*100;
+    payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);
     
 
 
@@ -207,7 +214,9 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(routerNo,rRouterNo);
-    payement(value1,value,salary,billingYear,billingMonth,service);
+    srand(3);
+    int recietNumber=(rand())*100;
+    payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);
 
  }
  
@@ -240,7 +249,9 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayment1);
     int value=strcmp(invoiceNo,rInvoiceNo);
-    payement(value1,value,salary,billingYear,billingMonth,service);
+    srand(4);
+    int recietNumber=(rand())*100;
+    payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);
  }
 
   void refisterLK(){
@@ -272,7 +283,9 @@ void dialogBroadBand(){
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(invoiceNo,rInvoiceNo);
-    payement(value1,value,salary,billingYear,billingMonth,service);   // call the payement function by passing two arguements
+    srand(5);
+    int recietNumber=(rand())*100;
+    payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);   // call the payement function by passing two arguements
 
 
     
@@ -348,7 +361,9 @@ void dialogBroadBand(){
     printf("If you want to do the payement Please Enter the yes ");
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
-    payement(value1,value,salary,billingYear,billingMonth,service);
+    srand(6);
+    int recietNumber=(rand())*100;
+    payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);
 
     
 
@@ -380,7 +395,9 @@ void dialogBroadBand(){
     scanf("%d",&billingMonth);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(eBillAccountNumber,reBillAccountNumber);
-    payement(value1,value,salary,billingYear,billingMonth,service);
+    srand(7);
+    int recietNumber=(rand())*100;
+    payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);
 
 
 
@@ -412,7 +429,9 @@ void dialogBroadBand(){
       scanf("%s",&confirmPayement);
       int value1=strcmp(accountNumber,accountNumber1);
       int value=strcmp(accountNumber,accountNumber1);
-      payement(value1,value,salary,billingYear,billingMonth,service);
+      srand(8);
+      int recietNumber=(rand())*100;
+      payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);
   }
   void dialogTV(){
      //--------------Dialog TV-----------------------------------------
@@ -439,7 +458,9 @@ void dialogBroadBand(){
      scanf("%s",&confirmPayement);
      int value1=strcmp(confirmPayement,confirmPayement1);
      int value=strcmp(accountNumber,reAccountNumber);
-     payement(value1,value,salary,billingYear,billingMonth,service);
+     srand(9);
+     int recietNumber=(rand())*100;
+     payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);
 
   }
  
@@ -470,7 +491,9 @@ void dialogBroadBand(){
       scanf("%s",&confirmPayement);
       int value1=strcmp(confirmPayement,confirmPayement1);
       int value=strcmp(policyNumber,rePolicyNumber);
-      payement(value1,value,salary,billingYear,billingMonth,service);
+      srand(10);
+      int recietNumber=(rand())*100;
+      payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);
 
   }
   void fairFirstInsurance(){
@@ -499,7 +522,9 @@ void dialogBroadBand(){
       scanf("%s",&confirmPayement);
       int value1=strcmp(confirmPayement,confirmPayement1);
       int value=strcmp(policyNumber,rePolicyNumber);
-      payement(value1,value,salary,billingYear,billingMonth,service);
+      srand(11);
+      int recietNumber=(rand())*100;
+      payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);
       
   }
   void  sriLankaInsuranceLife(){
@@ -526,7 +551,9 @@ void dialogBroadBand(){
       scanf("%s",&confirmPayement);
       int value1=strcmp(confirmPayement,confirmPayement1);
       int value=strcmp(policyNumber,rePolicyNumber);
-      payement(value1,value,salary,billingYear,billingMonth,service);
+      srand(12);
+      int receitNumber=(rand())*100;
+      payement(value1,value,salary,billingYear,billingMonth,service,receitNumber);
 
   }
   void sriLankaMotorInsurance(){
@@ -555,7 +582,9 @@ void dialogBroadBand(){
       scanf("%s",&confirmPayement);
       int value1=strcmp(confirmPayement1,confirmPayement);
       int value=strcmp(policyNumber,rePolicyNumber);
-      payement(value1,value,salary,billingYear,billingMonth,service);
+      srand(13);
+      int receitNumber=(rand())*100;
+      payement(value1,value,salary,billingYear,billingMonth,service,receitNumber);
 
       
   }
@@ -585,7 +614,9 @@ void dialogBroadBand(){
       scanf("%s",&confirmPayement);
       int value1=strcmp(confirmPayement,confirmPayement1);
       int value=strcmp(policyNumber,rePolicyNumber);
-      payement(value1,value,salary,billingYear,billingMonth,service);
+      srand(14);
+      int recietNumber=(rand())*100;
+      payement(value1,value,salary,billingYear,billingMonth,service,recietNumber);
   }
  
   void makePayements(){
