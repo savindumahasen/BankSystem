@@ -6,22 +6,24 @@
 
  void thirdPartyTransaction(){   // function declaration
     char recieverAccountNumber[12];  // define the variables
-    char senderAccountNumber[12];                          /*function definition*/
-    char senderAccountNumber1[12]="1234567890"; // function declaration
+    char re_recieverAccountNumber[12];                         /*function definition*/
+    //char senderAccountNumber1[12]="1234567890"; // function declaration
     int salary;
-    printf("Please Enter the Sender Account numbers\n");
-    scanf("%s",&senderAccountNumber);                            // get the user input fro users
-    printf("Please Enter the recieverAccountNumber\n");
+    printf("From Account\n");
+    printf("1234567890\n");                            // get the user input fro users
+    printf("Please Enter the Reciever Account Number\n");
     scanf("%s",&recieverAccountNumber);     // get the user input fro users
-    printf("Please Enter the recieverAccountNumber\n");
+    printf("Please Re-Enter the Reciever Account Number\n");
+    scanf("%s",&re_recieverAccountNumber);
     printf("Please Enter the Amount\n");
     scanf("%d",&salary);     // get the user input fro users
     printf("Please Enter the recieverAccountNumber\n");
-    int value=strcmp(senderAccountNumber,senderAccountNumber1);
+    int value=strcmp(recieverAccountNumber,re_recieverAccountNumber);
     if(value==0){
       printf("Third party Transaction is successfully completed!\n");
       printf("you transferd the %d ",salary);
       printf(" into the %s", recieverAccountNumber);
+      printf(" Account");
       printf(" successfully");
     }else{
       printf("Third party Transaction is not successfully completed!");
@@ -39,7 +41,7 @@ void payement(int value1,int value,int salary,char billingYear[20],char billingM
                                                                                                            */
        if(value==0){
               printf("Transaction is successfully confirmed!\n");
-              printf("you transfered %d",salary);
+              printf("you transfered RS: %d",salary);
               printf(" in to the %s \n",service);
               char option[20];
               char option1[20]="yes";
@@ -51,8 +53,8 @@ void payement(int value1,int value,int salary,char billingYear[20],char billingM
                   char accountNumber[12]="1234567890";
                 
                   printf("      Payement Successful    \n");
-                  printf("           RS. 600.00                 \n");
-                  printf("   Transaction successfulkly processed and amount\n");
+                  printf("       Rs: %d \n",salary);
+                  printf("   Transaction successfully processed and amount\n");
                   printf("   will be credited to your account within one or two\n");
                   printf("                     buisness days             \n");
                   printf("SUMMARY\n");
@@ -105,7 +107,8 @@ void telephonePayement(char service[100]){
     scanf("%s",&billingMonth);
     char confirmPayement[10];
     char confirmPayement1[10]="yes";
-    printf("If you want to do the payement Please Enter the yes\n");
+    printf("If you want to do the payement Please Enter the yes\n\n");
+    printf("-----------------------------------------------------------\n\n");
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(gsmNumber,rGsmNumber);
@@ -137,9 +140,9 @@ void dialogBroadBand(){
     printf("Please Re-Enter the Router No\n");
     scanf("%s",&rRouterNo);
     printf("Please Enter the Billing Year\n");
-    printf("%s",&billingYear);
+    scanf("%s",&billingYear);
     printf("Please Enter the Billing Month\n");
-    printf("%s",&billingMonth);
+    scanf("%s",&billingMonth);
     printf("If you want to do the payement Please Enter the yes\n");
     scanf("%s",&confirmPayement);
     int value1=strcmp(confirmPayement,confirmPayement1);
@@ -790,24 +793,38 @@ void dialogBroadBand(){
 int main()
 {
     char userName[50];   // define the variables
-    int password;
-    int option;
+    int  password;
+    char option2[20]="yes";
+    char option1[20];
     char userName1[50]="Savindu";   // declare the variables
+    int  newPassword;
+  
+    int  value1;
 
     printf("Please Enter the User Name\n");
     scanf("%s",&userName);
     printf("Please Enter the password\n");
     scanf("%d",&password);
-    int value=strcmp(userName,userName1);
-  
-
-    if((value==0)&&(password==456)){      
+    printf("Do you need to change the password Please Enter the yes\n");
+    scanf("%s",&option1);
+    int value=strcmp(option1,option2);
+    if(value==0){
+    printf("Please Enter the New Password\n");
+    scanf("%d",&newPassword);
+    password=newPassword;
+    
+     value1=strcmp(userName,userName1);
+    if((value1==0)&&(password==newPassword)){
         printf("Login is successfully confirmed\n");
+
+     
         printf("You can see the options below\n");
         //-----------------------------------------
         printf("If you want to do Third party Transaction Please Enter the option 1\n");
         printf("If you want to do Make Payements please Enter the option 2 ");
+        int option;
         printf("Please Enter the correct option\n");
+    
         scanf("%d",&option);
       
         //------------------------------------------------------
@@ -830,8 +847,41 @@ int main()
       }
 
 
-    return 0;
+    }else{    
+        printf("Login is successfully confirmed\n");
+
+     
+        printf("You can see the options below\n");
+        //-----------------------------------------
+        printf("If you want to do Third party Transaction Please Enter the option 1\n");
+        printf("If you want to do Make Payements please Enter the option 2 ");
+        int option;
+        printf("Please Enter the correct option\n");
+        scanf("%d",&option);
+      
+        //------------------------------------------------------
+        switch (option)
+        {
+        case 1:
+           thirdPartyTransaction();
+          break;
+        case 2:
+           makePayements();
+        
+        default:
+          printf("Please Enter the correct option\n");
+          break;
+        }
+      
+
+
+  
+
+
+   return 0;
+    }
 }
+
 
 
 
