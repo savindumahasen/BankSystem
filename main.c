@@ -40,6 +40,7 @@ void payement(int value1,int value,int salary,char billingYear[20],char billingM
                                                                                /*payement function definition
                                                                                                            */
        if(value==0){
+              printf("---------------------------------------------------------\n\n");
               printf("Transaction is successfully confirmed!\n");
               printf("you transfered RS: %d",salary);
               printf(" in to the %s \n",service);
@@ -178,6 +179,7 @@ void dialogBroadBand(){
     scanf("%s",&billingMonth);
     printf("If you want to do the payement Please Enter the yes\n");
     scanf("%s",&confirmPayement);
+    printf("------------------------------------------------------------------\n\n");
 
     int value1=strcmp(confirmPayement,confirmPayment1);
  
