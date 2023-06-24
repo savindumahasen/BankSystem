@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include<string.h>
+#include<stdlib.h>
+
 
 
  void thirdPartyTransaction(){   // function declaration
@@ -38,7 +40,37 @@ void payement(int value1,int value,int salary,char billingYear[20],char billingM
        if(value==0){
               printf("Transaction is successfully confirmed!\n");
               printf("you transfered %d",salary);
-              printf(" in to the %s",service);
+              printf(" in to the %s \n",service);
+              char option[20];
+              char option1[20]="yes";
+              printf("If you want to see the payement History! Please Enter the yes\n");
+              scanf("%s",&option);
+              int value3=strcmp(option,option1);
+              if(value3==0){
+                  
+                  char accountNumber[12]="1234567890";
+                  printf("      Payement Successful    \n");
+                  printf("           RS. 600.00                 \n");
+                  printf("   Transaction successfulkly processed and amount\n");
+                  printf("   will be credited to your account within one or two\n");
+                  printf("                     buisness days             \n");
+                  printf("SUMMARY\n");
+                  printf("Account Number %s \n",accountNumber);
+                  printf("Billing Year %s \n",billingYear);
+                  printf("Billing Month %s \n",billingMonth);
+                  printf("-----------------------------------------------------------------\n\n");
+                  printf("STATUS\n");
+
+
+                  printf("Your Bill Script is\n");
+                  printf("salary %d \n",salary);
+                  printf("Billing year %s \n",billingYear);
+                  printf("Billing Month %s \n",billingMonth);
+                  //printf("Reciet Number %d",recietNumber,"\n");
+                  printf("Result     Captured");
+
+              }
+
 
         }else{
               printf("Transaction is not successfully confirmed!");
@@ -50,23 +82,7 @@ void payement(int value1,int value,int salary,char billingYear[20],char billingM
     }
   
 }
-void insurancePayement(int value1,int value,int salary,char service[100]){
 
-  if(value1==0){
-     if(value==0){
-
-            printf("you transfered %d",salary);
-            printf(" into the %s",service);
-     }else{
-          printf("Transaction is not successfully onfirmed!");
-     }
-
-  
-  }else{
-         printf("Transaction process cannot be done!");
-  }
-       
-  }
 
 void telephonePayement(char service[100]){
     int salary;
@@ -97,8 +113,9 @@ void telephonePayement(char service[100]){
 
 
 void dialogBroadBand(){
-    printf("Dialog Broadband Internet Service Providers\n");
+   
     //-----------------------------------------------
+    printf("Dialog Broadband Internet Service Providers\n");
     int salary;
     char service[100]="Dialog Broad Brand";
     char routerNo[12];
@@ -128,8 +145,9 @@ void dialogBroadBand(){
    
 }
  void SLT(){
-     printf("SLT-4G Internet Service Providers");
+   
     //-----------------------------------------------
+    printf("SLT-4G Internet Service Providers");
     int salary;
     char service[100]="SLT-4G";
     char invoiceNo[20];
@@ -194,8 +212,9 @@ void dialogBroadBand(){
  }
  
  void lankaHost(){
-   printf("Lanka Host Internet Service Providers");
+   
     //-----------------------------------------------
+    printf("Lanka Host Internet Service Providers");
     int salary;
     char service[100]="Lanka Host";
     char invoiceNo[4];
@@ -225,8 +244,9 @@ void dialogBroadBand(){
  }
 
   void refisterLK(){
+   
+    //----------RefisterLK-------------------------------
     printf("Refister LK Internet Service Providers");
-    //-----------------------------------------------
     int salary;
     char service[100]="Refister LK";
     char invoiceNo[4];
@@ -416,6 +436,7 @@ void dialogBroadBand(){
      printf("Please Enter the Billing Month\n");
      scanf("%s",billingMonth);
      printf("If you want to  do payement Please Enter the yes\n ");
+     scanf("%s",&confirmPayement);
      int value1=strcmp(confirmPayement,confirmPayement1);
      int value=strcmp(accountNumber,reAccountNumber);
      payement(value1,value,salary,billingYear,billingMonth,service);
@@ -427,25 +448,29 @@ void dialogBroadBand(){
       //-----------SoftLogic Insurance-----------
       int salary;
       char policyNumber[12];
+      char billingYear[20];
+      char billingMonth[20];
       char rePolicyNumber[12];
-      char confirmPayement;
-      char confirmPayement1[12];
-      char service[100];
+      char confirmPayement[12];
+      char confirmPayement1[12]="yes";
+      char service[100]="SoftLogic Insurance Serivce";
       printf("Pay From\n");
-      printf("1234567890");
+      printf("1234567890\n");
       printf("Please Enter the Amount\n");
       scanf("%d",&salary);
       printf("Please Enter the Policy Number\n");
       scanf("%s",&policyNumber);
-      printf("Please Re-Enter the policy Number");
+      printf("Please Re-Enter the policy Number\n");
       scanf("%s",&rePolicyNumber);
-      printf("Please Enter the yes for dping the payement\n");
+      printf("Please Enter the Billing Year\n");
+      scanf("%s",&billingYear);
+      printf("Please Enter the Billing Month\n");
+      scanf("%s",&billingMonth);
+      printf("If you want to do payement Please Enter the yes\n");
       scanf("%s",&confirmPayement);
-      printf("Please Enter the Insurance Service name\n");
-      scanf("%s",&service);
       int value1=strcmp(confirmPayement,confirmPayement1);
       int value=strcmp(policyNumber,rePolicyNumber);
-      insurancePayement(value1,value,salary,service);
+      payement(value1,value,salary,billingYear,billingMonth,service);
 
   }
   void fairFirstInsurance(){
@@ -453,24 +478,28 @@ void dialogBroadBand(){
       int salary;
       char policyNumber[12];
       char rePolicyNumber[12];
-      char confirmPayement;
-      char confirmPayement1[12];
-      char service[100];
+      char confirmPayement[12];
+      char billingYear[20];
+      char billingMonth[20];
+      char confirmPayement1[12]="yes";
+      char service[100]="Fair First Insurance Service";
       printf("Pay From\n");
-      printf("1234567890");
+      printf("1234567890\n");
       printf("Please Enter the Amount\n");
       scanf("%d",&salary);
       printf("Please Enter the Policy Number\n");
       scanf("%s",&policyNumber);
       printf("Please Re-Enter the policy Number");
       scanf("%s",&rePolicyNumber);
-      printf("Please Enter the yes for dping the payement\n");
+      printf("Please Enter the Billing Year\n");
+      scanf("%s",&billingYear);
+      printf("Please Enter the Billing mONTH\n");
+      scanf("%s",&billingMonth);
+      printf("If you want to payement please Enter the yes\n");
       scanf("%s",&confirmPayement);
-      printf("Please Enter the Insurance Service name\n");
-      scanf("%s",&service);
       int value1=strcmp(confirmPayement,confirmPayement1);
       int value=strcmp(policyNumber,rePolicyNumber);
-      insurancePayement(value1,value,salary,service);
+      payement(value1,value,salary,billingYear,billingMonth,service);
       
   }
   void  sriLankaInsuranceLife(){
@@ -478,24 +507,26 @@ void dialogBroadBand(){
       int salary;
       char policyNumber[12];
       char rePolicyNumber[12];
-      char confirmPayement;
-      char confirmPayement1[12];
-      char service[100];
+      char billingYear[20];
+      char billingMonth[20];
+      char confirmPayement[12];
+      char confirmPayement1[12]="yes";
+      char service[100]="SriLanakan Inurance Life Service";
       printf("Pay From\n");
-      printf("1234567890");
+      printf("1234567890\n");
       printf("Please Enter the Amount\n");
       scanf("%d",&salary);
       printf("Please Enter the Policy Number\n");
       scanf("%s",&policyNumber);
       printf("Please Re-Enter the policy Number");
       scanf("%s",&rePolicyNumber);
-      printf("Please Enter the yes for dping the payement\n");
-      scanf("%s",&confirmPayement);
       printf("Please Enter the Insurance Service name\n");
       scanf("%s",&service);
+      printf("If you want to do payement Please Enter the yes\n");
+      scanf("%s",&confirmPayement);
       int value1=strcmp(confirmPayement,confirmPayement1);
       int value=strcmp(policyNumber,rePolicyNumber);
-      insurancePayement(value1,value,salary,service);
+      payement(value1,value,salary,billingYear,billingMonth,service);
 
   }
   void sriLankaMotorInsurance(){
@@ -503,24 +534,28 @@ void dialogBroadBand(){
       int salary;
       char policyNumber[12];
       char rePolicyNumber[12];
-      char confirmPayement;
-      char confirmPayement1[12];
-      char service[100];
+      char confirmPayement[12];
+      char confirmPayement1[12]="yes";
+      char billingYear[20];
+      char billingMonth[20];
+      char service[100]="SriLanakan Insurance Service";
       printf("Pay From\n");
-      printf("1234567890");
+      printf("1234567890\n");
       printf("Please Enter the Amount\n");
       scanf("%d",&salary);
       printf("Please Enter the Policy Number\n");
       scanf("%s",&policyNumber);
       printf("Please Re-Enter the policy Number");
       scanf("%s",&rePolicyNumber);
-      printf("Please Enter the yes for dping the payement\n");
+      printf("Please Enter the Billing Year\n");
+      scanf("%s",&billingYear);
+      printf("Please Enter the Billing Month\n");
+      scanf("%s",&billingMonth);
+      printf("If you want to do payement Please Enter the yes\n");
       scanf("%s",&confirmPayement);
-      printf("Please Enter the Insurance Service name\n");
-      scanf("%s",&service);
-      int value1=strcmp(confirmPayement,confirmPayement1);
+      int value1=strcmp(confirmPayement1,confirmPayement);
       int value=strcmp(policyNumber,rePolicyNumber);
-      insurancePayement(value1,value,salary,service);
+      payement(value1,value,salary,billingYear,billingMonth,service);
 
       
   }
@@ -529,24 +564,28 @@ void dialogBroadBand(){
       int salary;
       char policyNumber[12];
       char rePolicyNumber[12];
-      char confirmPayement;
-      char confirmPayement1[12];
-      char service[100];
+      char confirmPayement[12];
+      char confirmPayement1[12]="yes";
+      char billingYear[20];
+      char billingMonth[20];
+      char service[100]="Ceylinco Insurance Service";
       printf("Pay From\n");
-      printf("1234567890");
+      printf("1234567890\n");
       printf("Please Enter the Amount\n");
       scanf("%d",&salary);
       printf("Please Enter the Policy Number\n");
       scanf("%s",&policyNumber);
       printf("Please Re-Enter the policy Number");
       scanf("%s",&rePolicyNumber);
-      printf("Please Enter the yes for dping the payement\n");
+      printf("Please Enter the Billing Year\n");
+      scanf("%s",&billingYear);
+      printf("Please Enter the Billing Month\n");
+      scanf("%s",&billingMonth);
+      printf("If you want to do payement Please Enter the yes\n");
       scanf("%s",&confirmPayement);
-      printf("Please Enter the Insurance Service name\n");
-      scanf("%s",&service);
       int value1=strcmp(confirmPayement,confirmPayement1);
       int value=strcmp(policyNumber,rePolicyNumber);
-      insurancePayement(value1,value,salary,service);
+      payement(value1,value,salary,billingYear,billingMonth,service);
   }
  
   void makePayements(){
@@ -676,7 +715,7 @@ void dialogBroadBand(){
           printf("If you want to  do a payement for Fairfirst Insurance Please Enter the option 2\n");
           printf("If you want to do a payement for Srilanka Insurance-Life Renewals Please Enter the option 3\n");
           printf("If you want to do a payement for Srilana Insurance-Motor Renewals Please Enter the option 4\n");
-          printf("If you want to do a payement for Janashathi Insurance Please Enter the option 4\n");
+          //printf("If you want to do a payement for Janashathi Insurance Please Enter the option 5\n");
           printf("If you want to do a payement for Ceylinco Life Insurance Please Enter the option 5\n");
           int option6;
           printf("Please Enter the Insurance option\n");
@@ -684,7 +723,7 @@ void dialogBroadBand(){
           switch(option6){
 
             case 1:
-                softloginInsurance();
+                softlogicInsurance();
                 break;
             case 2:
                 fairFirstInsurance();
@@ -704,6 +743,7 @@ void dialogBroadBand(){
                printf("Please Enter the correct option");
           
           }
+          break;
          
      
        default:
