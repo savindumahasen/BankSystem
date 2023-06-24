@@ -54,7 +54,7 @@ void payement(int value1,int value,int salary,char billingYear[20],char billingM
                   char accountNumber[12]="1234567890";
                 
                   printf("      Payement Successful    \n");
-                  printf("       Rs: %d \n",salary);
+                  printf("          Rs: %d \n",salary);
                   printf("   Transaction successfully processed and amount\n");
                   printf("   will be credited to your account within one or two\n");
                   printf("                     buisness days             \n");
@@ -146,6 +146,7 @@ void dialogBroadBand(){
     scanf("%s",&billingMonth);
     printf("If you want to do the payement Please Enter the yes\n");
     scanf("%s",&confirmPayement);
+    printf("-------------------------------------------------------------------\n\n");
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(routerNo,rRouterNo);
     srand(1);
@@ -217,6 +218,7 @@ void dialogBroadBand(){
     scanf("%s",billingMonth);
     printf("If you want to do the payement Please Enter the yes\n");
     scanf("%s",&confirmPayement);
+    printf("------------------------------------------------------------\n\n");
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(routerNo,rRouterNo);
     srand(3);
@@ -252,6 +254,7 @@ void dialogBroadBand(){
    
     printf("If you want to do the payement Please Enter the yes\n");
     scanf("%s",&confirmPayement);
+    printf("-----------------------------------------------------------=------------\n\n");
     int value1=strcmp(confirmPayement,confirmPayment1);
     int value=strcmp(invoiceNo,rInvoiceNo);
     srand(4);
@@ -286,6 +289,7 @@ void dialogBroadBand(){
     
     printf("If you want to do the payement Please Enter the yes\n ");
     scanf("%s",&confirmPayement);
+    printf("---------------------------------------------------------------------\n\n");
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(invoiceNo,rInvoiceNo);
     srand(5);
@@ -365,6 +369,7 @@ void dialogBroadBand(){
     char confirmPayement1[12]="yes";
     printf("If you want to do the payement Please Enter the yes ");
     scanf("%s",&confirmPayement);
+    printf("--------------------------------------------------------------\n\n");
     int value1=strcmp(confirmPayement,confirmPayement1);
     srand(6);
     int recietNumber=(rand())*100;
@@ -392,12 +397,13 @@ void dialogBroadBand(){
     scanf("%s",&eBillAccountNumber);
     printf("Please Re-Enter the Electricity Bill Number\n");
     scanf("%s",&reBillAccountNumber);
-    printf("If you want to do payement Please Enter the yes");
-    scanf("%s",&confirmPayement);
     printf("Please Enter the Billing Year");
     scanf("%d",&billingYear);
     printf("Please Enter the Billing Month");
     scanf("%d",&billingMonth);
+    printf("If you want to do payement Please Enter the yes");
+    scanf("%s",&confirmPayement);
+    printf("--------------------------------------------------------\n\n");
     int value1=strcmp(confirmPayement,confirmPayement1);
     int value=strcmp(eBillAccountNumber,reBillAccountNumber);
     srand(7);
@@ -432,6 +438,7 @@ void dialogBroadBand(){
       scanf("%s",&billingMonth);
       printf("If you want to do payement Please Enter the yes\n");
       scanf("%s",&confirmPayement);
+      printf("--------------------------------------------------------\n\n");
       int value1=strcmp(accountNumber,accountNumber1);
       int value=strcmp(accountNumber,accountNumber1);
       srand(8);
@@ -461,6 +468,7 @@ void dialogBroadBand(){
      scanf("%s",billingMonth);
      printf("If you want to  do payement Please Enter the yes\n ");
      scanf("%s",&confirmPayement);
+     printf("-----------------------------------------------------------\n\n");
      int value1=strcmp(confirmPayement,confirmPayement1);
      int value=strcmp(accountNumber,reAccountNumber);
      srand(9);
@@ -494,6 +502,7 @@ void dialogBroadBand(){
       scanf("%s",&billingMonth);
       printf("If you want to do payement Please Enter the yes\n");
       scanf("%s",&confirmPayement);
+      printf("----------------------------------------------------------------\n\n");
       int value1=strcmp(confirmPayement,confirmPayement1);
       int value=strcmp(policyNumber,rePolicyNumber);
       srand(10);
@@ -525,6 +534,7 @@ void dialogBroadBand(){
       scanf("%s",&billingMonth);
       printf("If you want to payement please Enter the yes\n");
       scanf("%s",&confirmPayement);
+      printf("-----------------------------------------------------------------\n\n");
       int value1=strcmp(confirmPayement,confirmPayement1);
       int value=strcmp(policyNumber,rePolicyNumber);
       srand(11);
@@ -554,6 +564,7 @@ void dialogBroadBand(){
       scanf("%s",&service);
       printf("If you want to do payement Please Enter the yes\n");
       scanf("%s",&confirmPayement);
+      printf("-------------------------------------------------------------\n\n");
       int value1=strcmp(confirmPayement,confirmPayement1);
       int value=strcmp(policyNumber,rePolicyNumber);
       srand(12);
@@ -585,6 +596,7 @@ void dialogBroadBand(){
       scanf("%s",&billingMonth);
       printf("If you want to do payement Please Enter the yes\n");
       scanf("%s",&confirmPayement);
+      printf("----------------------------------------------------------------\n\n");
       int value1=strcmp(confirmPayement1,confirmPayement);
       int value=strcmp(policyNumber,rePolicyNumber);
       srand(13);
@@ -617,6 +629,7 @@ void dialogBroadBand(){
       scanf("%s",&billingMonth);
       printf("If you want to do payement Please Enter the yes\n");
       scanf("%s",&confirmPayement);
+      printf("-----------------------------------------------------------\n\n");
       int value1=strcmp(confirmPayement,confirmPayement1);
       int value=strcmp(policyNumber,rePolicyNumber);
       srand(14);
